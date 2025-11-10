@@ -126,7 +126,8 @@
       </div>
       <canvas id="priceChart" height="200"></canvas>
       <p class="muted" style="margin-top: 8px; font-size: 11px;">
-        💡 <strong>Controles:</strong> Scroll para zoom | Ctrl+Arrastrar para pan | Click botón para resetear
+        💡 <strong>Controles:</strong> Rueda del mouse para zoom | Arrastrar para desplazar (pan) | Click en "Resetear
+        Zoom" para volver a la vista original
       </p>
     </div>
     <div class="card">
@@ -358,17 +359,24 @@
               zoom: {
                 wheel: {
                   enabled: true,
-                  speed: 0.1
+                  speed: 0.1,
+                  modifierKey: null  // Permitir zoom sin tecla modificadora
                 },
                 pinch: {
                   enabled: true
+                },
+                drag: {
+                  enabled: true,
+                  backgroundColor: 'rgba(33, 150, 243, 0.1)',
+                  borderColor: 'rgba(33, 150, 243, 0.5)',
+                  borderWidth: 1
                 },
                 mode: 'xy'
               },
               pan: {
                 enabled: true,
                 mode: 'xy',
-                modifierKey: 'ctrl'
+                modifierKey: null  // Permitir pan sin necesidad de Ctrl
               },
               limits: {
                 x: { min: 'original', max: 'original' },

@@ -40,7 +40,7 @@ execution:
 
 # --- Datos ---
 data:
-  source: "simulated"      # "simulated" | "ib" | "csv"
+  source: "ib"             # "simulated" | "ib" | "csv"
   csv_path: "./data/eurusd.csv"   # si source=csv
   bars: 3000
   seed: 42
